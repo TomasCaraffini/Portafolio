@@ -1,0 +1,221 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Plugins jQuery - Ejemplos</title>  
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>  
+    
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">  
+    
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">  
+    
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+        }  
+
+      
+        .carousel-container {  
+            width: 40%; 
+            margin: 0 auto;  
+            position: relative;  
+        }
+
+            .carousel img {  
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .slick-prev, .slick-next {  
+                font-size: 24px;  
+                color: #000;  
+                position: absolute;  
+                top: 50%;  
+                transform: translateY(-50%);  
+                z-index: 1;  
+                background-color: rgba(255, 255, 255, 0.5);  
+                border-radius: 50%;  
+                padding: 10px;  
+                cursor: pointer;
+                top: 50%;  
+            }
+
+            .slick-prev {  
+                left: -25px;  
+            }
+
+            .slick-next {  
+                right: -25px;  
+            }
+
+            .carousel {  
+                margin-left: 20px;  
+                margin-right: 20px;  
+            }
+
+
+       
+        .parallax-section {  
+            background-image: url(Imagenes/images.jpg);
+            height: 400px;  
+            color: white;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            font-size: 24px;  
+            background-attachment: fixed;  
+            background-size: cover;  
+        }  
+
+        .whatsapp-button {  
+            position: fixed;  
+            bottom: 30px; 
+            right: 30px; 
+            background-color: #25D366;  
+            border-radius: 50%;  
+            padding: 10px;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  
+            z-index: 1000;
+        }  
+
+        .whatsapp-button img {  
+            width: 50px;  
+            height: 50px;  
+        }  
+
+        .slick-prev, .slick-next {  
+            font-size: 24px;  
+            color: #000;  
+            position: absolute;  
+            top: 50%;  
+            transform: translateY(-50%);  
+            z-index: 1;  
+            background-color: rgba(255, 255, 255, 0.5);  
+            border-radius: 50%;  
+            padding: 10px;  
+            cursor: pointer; 
+        }  
+
+        .slick-prev {  
+            left: -25px;  
+        }  
+
+        .slick-next {  
+            right: -25px;  
+        }  
+
+
+        .owl-carousel{
+            width: 30%;
+            margin: auto;
+        }
+
+    </style>  
+</head>  
+<body>  
+    <h1>Implementación de Plugins jQuery</h1>  
+
+   
+    <div class="carousel-container">  
+        <div class="carousel">  
+            <div><img src="Imagenes/silueta-aston-martni-amr24-soymotor.png.png" alt="Imagen 1"></div>  
+            <div><img src="Imagenes/images.jpeg" alt="Imagen 2"></div>  
+            <div><img src="Imagenes/ferrari-96052_1280.webp" alt="Imagen 3"></div>  
+        </div>  
+    </div>  
+    
+    <hr>  
+
+   
+    <a href="https://wa.me/1234567890?text=¡Hola!%20Necesito%20más%20información." target="_blank" class="whatsapp-button">  
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/600px-WhatsApp.svg.png" alt="Chat with us on WhatsApp" />  
+    </a>  
+
+    <hr>  
+
+    <div class="parallax-section">  
+        <h2>Contenido sobre fondo parallax</h2>  
+    </div>  
+
+    <hr>  
+
+  
+    <a href="Imagenes/fernando-alonso-aston-martin-r.jpg" data-fancybox="gallery">  
+        <img src="Imagenes/fernando-alonso-aston-martin-r.jpg" style="height: 25%; width: 25%;" alt="Imagen 1">  
+    </a>  
+    <a href="Imagenes/lewis-hamilton-mercedes.jpg" data-fancybox="gallery">  
+        <img src="Imagenes/lewis-hamilton-mercedes.jpg" style="height: 25%; width: 25%;" alt="Imagen 2">  
+    </a>  
+    <a href="Imagenes/max-verstappen-red-bull-racing.jpg" data-fancybox="gallery">  
+        <img src="Imagenes/max-verstappen-red-bull-racing.jpg" style="height: 25%; width: 25%;" alt="Imagen 3">  
+    </a>  
+
+    <hr>  
+
+  
+    <div class="owl-carousel">  
+        <div><img src="Imagenes/charles-leclerc-ferrari.jpg" alt="leclerc"></div>  
+        <div><img src="Imagenes/alex-albon-williams.jpg"  alt="albon"></div>  
+        <div><img src="Imagenes/lando-norris-mclaren.jpg" alt="norris"></div>  
+    </div>  
+
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>  
+    <script>  
+        $(document).ready(function(){  
+            $('.carousel').slick({  
+                autoplay: true,  
+                arrows: true,  
+                dots: false,  
+                infinite: true,  
+                speed: 500,  
+                fade: false,  
+                cssEase: 'linear',  
+                prevArrow: '<button type="button" class="slick-prev">←</button>',  
+                nextArrow: '<button type="button" class="slick-next">→</button>'   
+            });  
+        });  
+    </script>  
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2.0.3/dist/jarallax.min.js"></script>  
+    <script>  
+        $(document).ready(function() {  
+            $('.parallax-section').jarallax();  
+        });  
+    </script>  
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>  
+    <script>  
+        $(document).ready(function() {  
+            $('[data-fancybox="gallery"]').fancybox();  
+        });  
+    </script>  
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>  
+    <script>  
+        $(document).ready(function(){  
+            $('.owl-carousel').owlCarousel({  
+                items: 1,  
+                loop: true,  
+                autoplay: true,  
+                autoplayTimeout: 3000,  
+                autoplayHoverPause: true  
+            });  
+        });  
+    </script>  
+
+</body>  
+</html>
